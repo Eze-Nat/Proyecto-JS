@@ -1,0 +1,43 @@
+const stockProductos = [{
+    id: 1,
+    nombre: "Galileo Blend Tinto",
+    imagen: "../img/vinogalileo.jpg",
+    precio: 950,
+    cantidad: 0,
+},
+{
+    id: 2,
+    nombre: "Pragmatico Malbec",
+    imagen: "../img/vinopragmatico.jpg",
+    precio: 820,
+    cantidad: 0,
+},
+{
+    id: 3,
+    nombre: "Ejes Malbec",
+    imagen: "../img/vinosejes.jpg",
+    precio: 500,
+    cantidad: 0,
+},
+{
+    id: 4,
+    nombre: "Casa Araujo Cask Malbec",
+    imagen: "../img/vinocasaaraujo.jpg",
+    precio: 850,
+    cantidad: 0,
+},
+{
+    id: 5,
+    nombre: "Nucha Malbec Organico",
+    imagen: "../img/vinonucha.jpg",
+    precio: 950,
+    cantidad: 0,
+},
+{
+    id: 6,
+    nombre: "Septima Malbec",
+    imagen: "../img/vinoseptimamalbec.jpg",
+    precio: 750,
+    cantidad: 0,
+},
+];
