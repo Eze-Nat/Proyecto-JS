@@ -85,44 +85,5 @@ function costoTotal(producto) {
 
 }
 
-function displayCarrito() {
-    let itemsCarrito = localStorage.getItem("productosEnCarrito");
-    itemsCarrito = JSON.parse(itemsCarrito);
-    let productContainer = document.querySelector(".productos");
-    console.log(itemsCarrito) // vamos bien
-    let costoCarrito = localStorage.getItem("costoTotal");
-
-    if(itemsCarrito && productContainer) {
-        productContainer.innerHTML = "";
-        Object.values(itemsCarrito).map(item => {
-            productContainer.innerHTML += `
-            <div class="product">
-            <i class="fa-solid fa-xmark"></i>
-            <img src="${productos.imagen}"/>
-            <span>${productos.nombre}</span>
-            <div class="precio">${producto.precio}</div>
-            <div class="cantidad">
-            <i class="fa-solid fa-arrow-down"></i>
-            <span>${productos.cantidad}</span>
-            <i class="fa-solid fa-arrow-up"></i>
-            </div>
-            <div class"total">
-            ${productos.cantidad * productos.precio},00
-            </div>
-                        
-            `
-        });
-        productContainer.innerHTML += `
-        <div class="totalFinalContenedor">
-            <h4 class="totalTitulo">
-                Total
-            </h4>
-            <h4 class="totalFinal">
-                $${costoCarrito},00
-            </h4> 
-        `
-    }
-}
 
 onCargarCarrito();
-displayCarrito();

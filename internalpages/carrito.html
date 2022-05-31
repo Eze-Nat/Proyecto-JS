@@ -14,7 +14,7 @@
         <nav>
             <h2>COMPRA</h2>
             <ul>
-                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="productos.html">Inicio</a></li>
                 <li><a href="#">About</a></li>
                 <li class="cart">
                     <a href="./carrito.html">
@@ -26,24 +26,23 @@
         </nav>
     </header>
 
-    <div class="container-product">
-        <div class="product-header">
-            <h5 class="producto-title">Producto</h5>
-            <h5 class="precio">Precio</h5>
-            <h5 class="cantidad">Cantidad</h5>
-            <h5 class="total">TOTAL</h5>
-        </div>
-        <dic class="productos">
 
-        </dic>
-    </div>
+    <table class="container-product">    
+        <thead class="product-header">
+            <tr>
+                <th class="producto-title">Producto</th>
+                <th class="precio">Precio</th>
+                <th class="cantidad">Cantidad</th>
+                <th class="total">TOTAL</th>
+            </tr>
 
-    <div class="page-content container" id="contenedor-productos">
+        </thead>
+        <tbody id="productos" class="productos">
 
-    </div>
-
+        </tbody>
+    </table>
     
-    <script src="/stock.js"></script>
-    <script src="/script.js"></script>
+    <script src="/carrito.js"></script>
+    
 </body>
 </html>
