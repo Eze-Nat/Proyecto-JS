@@ -8,7 +8,7 @@ stockProductos.forEach((producto) => {
     div.innerHTML = `
     <h3>${producto.nombre}</h3>
     <img src="${producto.imagen}"/>
-    <h1>${producto.precio}</h1>
+    <h1>$${producto.precio}</h1>
     <button class="button-add add-cart" id="${producto.id}">Agregar</button>    
     `
 

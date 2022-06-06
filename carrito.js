@@ -11,24 +11,25 @@ function displayCarrito() {
     if(itemsCarrito && productContainer) {
         productContainer.innerHTML = "";
         Object.values(itemsCarrito).map(item => {
-            let row = document.createElement("tr");
-            row.innerHTML = `
-            <td class="product">
-            <i class="fa-solid fa-xmark"></i>
-            <img class="img-carrito" src="${item.imagen}"/>
-            <span>${item.nombre}</span> </td>
-            <td class="precio">${item.precio}</td>
-            <td class="cantidad">
-            <i class="fa-solid fa-arrow-down"></i>
-            <span>${item.cantidad}</span>
-            <i class="fa-solid fa-arrow-up"></i>
-            </td>
-            <td class"total">
-            ${item.cantidad * item.precio},00
-            </td>
+            /* let row = document.createElement("div"); */
+            productContainer.innerHTML += `
+            <div class="producto">
+                <i class="fa-solid fa-xmark"></i>
+                <img class="img-carrito" src="${item.imagen}"/>
+                <span>${item.nombre}</span> 
+            </div>
+            <div class="precio">$${item.precio},00</div>
+            <div class="cantidad">
+                <i class="fa-solid fa-arrow-down"></i>
+                <span>${item.cantidad}</span>
+                <i class="fa-solid fa-arrow-up"></i>
+            </div>
+            <div class="total">
+                $${item.cantidad * item.precio},00
+            </div>
             
-            ` 
-            productContainer.appendChild(row);
+            ` ;
+            /* productContainer.appendChild(row); */
             
         });
         productContainer.innerHTML += `
@@ -39,8 +40,10 @@ function displayCarrito() {
             <h4 class="totalFinal">
                 $${costoCarrito},00
             </h4> 
+        </div>
         `
     }
 }
+
 
 displayCarrito();
