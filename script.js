@@ -17,11 +17,23 @@ stockProductos.forEach((producto) => {
     const boton = document.getElementById(`${producto.id}`);
 
     boton.addEventListener("click", () => {
+
         agregarAlCarrito(producto); 
-        costoTotal(producto)
+        costoTotal(producto);
+
     })
 });
 
+const btn = document.querySelector(`button-add`);
+
+btn.addEventListener("click", () => {
+swal.fire({
+    title:` Agregado!`,
+    text:`Gracias por su compra`,
+    icon:`succses`,
+    showConfirmButton: true,
+})
+})
 function onCargarCarrito() {
     let productNumbers = localStorage.getItem("carrito");
 
@@ -84,6 +96,7 @@ function costoTotal(producto) {
     }
 
 }
+
 
 
 onCargarCarrito();
