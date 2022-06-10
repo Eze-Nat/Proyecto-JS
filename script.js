@@ -24,7 +24,16 @@ stockProductos.forEach((producto) => {
     })
 });
 
+const btn = document.querySelector(`button-add`);
 
+btn.addEventListener("click", () => {
+swal.fire({
+    title:` Agregado!`,
+    text:`Gracias por su compra`,
+    icon:`succses`,
+    showConfirmButton: true,
+})
+})
 function onCargarCarrito() {
     let productNumbers = localStorage.getItem("carrito");
 
