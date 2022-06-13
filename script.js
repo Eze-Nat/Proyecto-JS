@@ -17,23 +17,31 @@ stockProductos.forEach((producto) => {
     const boton = document.getElementById(`${producto.id}`);
 
     boton.addEventListener("click", () => {
-
+        Toastify({
+            text: "Agregado",
+            duration: 3000,
+            poistion: "right",
+            gravity: "bottom",
+            style: {
+                background: "#d6a26d",
+            }
+        }).showToast();
+    
         agregarAlCarrito(producto); 
         costoTotal(producto);
 
     })
 });
 
-const btn = document.querySelector(`button-add`);
+/* function agregarAccionBoton() {
+    const btn = document.querySelector("add-cart");
+    console.log("que onda")
+    btn.addEventListener(`click`, ()=> {
 
-btn.addEventListener("click", () => {
-swal.fire({
-    title:` Agregado!`,
-    text:`Gracias por su compra`,
-    icon:`succses`,
-    showConfirmButton: true,
-})
-})
+} */
+
+
+
 function onCargarCarrito() {
     let productNumbers = localStorage.getItem("carrito");
 
